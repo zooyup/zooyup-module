@@ -1,0 +1,65 @@
+# 로컬 .terraform 디렉토리들
+**/.terraform/*
+
+# .tfstate 파일들
+*.tfstate
+*.tfstate.*
+
+# 크래시 로그 파일들
+crash.log
+crash.*.log
+
+# 모든 .tfvars 파일들을 제외합니다. 이 파일들은 비밀번호, 개인 키 등 민감한 데이터를 포함할 가능성이 높습니다.
+# 이러한 파일들은 환경에 따라 변경될 수 있는 데이터 포인트이므로 버전 관리에 포함되지 않아야 합니다.
+*.tfvars
+*.tfvars.json
+
+# 오버라이드 파일들을 무시합니다. 이 파일들은 보통 로컬에서 리소스를 오버라이드하는 데 사용되므로
+# 체크인되지 않습니다.
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# 버전 관리에 포함하고 싶은 오버라이드 파일이 있다면 부정 패턴을 사용하여 추가할 수 있습니다
+# !example_override.tf
+
+# terraform plan -out=tfplan 명령의 출력인 tfplan 파일들을 무시합니다
+# 예시: *tfplan*
+*.tfplan
+*.tfplan.json
+
+# CLI 설정 파일들을 무시합니다
+.terraformrc
+terraform.rc
+
+# 잠금 파일들을 무시합니다 (선택사항 - 일부 팀은 이를 버전 관리하는 것을 선호합니다)
+# .terraform.lock.hcl
+
+# 로컬 환경 파일들을 무시합니다
+.env
+.envrc
+
+# 키 파일들을 무시합니다
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 시크릿 파일들을 무시합니다
+secrets.tf
+secrets.tfvars
+
+# 백업 파일들을 무시합니다
+*.backup
+*.bak
+
+# 로그 파일들을 무시합니다
+*.log
+
+# 임시 파일들을 무시합니다
+*.tmp
+*.temp
+
+# 캐시 디렉토리들을 무시합니다
+.cache/
